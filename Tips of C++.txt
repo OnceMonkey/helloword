@@ -1,0 +1,15 @@
+
+#include "CvvImage.h"
+void DrawPicture(Mat Picture,UINT ID)
+{
+	IplImage r=picture;
+	IplImage *img=&r;
+	CDC *pDC = GetDlgItem(ID)->GetDC();
+	HDC hDC= pDC->GetSafeHdc();
+	CRect rect;
+	GetDlgItem(ID)->GetClientRect(&rect);
+	CvvImage cimg;
+	cimg.CopyOf( img ); // 复制图片
+	cimg.DrawToHDC( hDC, &rect ); // 将图片绘制到显示控件的指定区域内
+	ReleaseDC( pDC );
+}
