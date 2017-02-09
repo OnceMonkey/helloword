@@ -1,2 +1,2 @@
-   <a href="http://www.baidu.com">                         百度</a>
+<a href="主页.html">Ted Ju's blog</a>
 
